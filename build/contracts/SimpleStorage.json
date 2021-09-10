@@ -1,0 +1,635 @@
+{
+  "contractName": "SimpleStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "caller",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "storedData",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"caller\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"storedData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/michaeldaigler/Documents/Consensys-Academy/BlockchainDevBootcamp/Mulitsig-Wallet-Exercise/multisig-wallet-exercise/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/michaeldaigler/Documents/Consensys-Academy/BlockchainDevBootcamp/Mulitsig-Wallet-Exercise/multisig-wallet-exercise/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x167643a86fbf7b627a973df4007afd637cd365e4cbf46678935051da1fe88929\",\"urls\":[\"bzz-raw://eac7378d2c09fb3e8f15f77ae4e72ae7b094ac4d8d8734573f1d1931d8303166\",\"dweb:/ipfs/QmSL83ZtKW7bxUfYSu8wrLvQmUuH3BmNon6JKsQszE6xbw\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610188806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80632a1afcd91461004657806360fe47b114610064578063fc9c8d3914610092575b600080fd5b61004e6100dc565b6040518082815260200191505060405180910390f35b6100906004803603602081101561007a57600080fd5b81019080803590602001909291905050506100e2565b005b61009a61012d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60005481565b33600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508060008190555050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a72315820c43f5915b359a88cb4200427f096b510fd82bc6338c31006b5ff1575d4d928ec64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80632a1afcd91461004657806360fe47b114610064578063fc9c8d3914610092575b600080fd5b61004e6100dc565b6040518082815260200191505060405180910390f35b6100906004803603602081101561007a57600080fd5b81019080803590602001909291905050506100e2565b005b61009a61012d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60005481565b33600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508060008190555050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a72315820c43f5915b359a88cb4200427f096b510fd82bc6338c31006b5ff1575d4d928ec64736f6c63430005100032",
+  "sourceMap": "25:176:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:176:2;;;;;;;",
+  "deployedSourceMap": "25:176:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:176:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;54:22;;;:::i;:::-;;;;;;;;;;;;;;;;;;;111:88;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;111:88:2;;;;;;;;;;;;;;;;;:::i;:::-;;83:21;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;54:22;;;;:::o;111:88::-;158:10;149:6;;:19;;;;;;;;;;;;;;;;;;191:1;178:10;:14;;;;111:88;:::o;83:21::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract SimpleStorage {\n    uint public storedData;\n\n    address public caller;\n\n    function set(uint x) public {\n        caller = msg.sender;\n        storedData = x;\n    }\n}\n",
+  "sourcePath": "/Users/michaeldaigler/Documents/Consensys-Academy/BlockchainDevBootcamp/Mulitsig-Wallet-Exercise/multisig-wallet-exercise/contracts/SimpleStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/michaeldaigler/Documents/Consensys-Academy/BlockchainDevBootcamp/Mulitsig-Wallet-Exercise/multisig-wallet-exercise/contracts/SimpleStorage.sol",
+    "exportedSymbols": {
+      "SimpleStorage": [
+        490
+      ]
+    },
+    "id": 491,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 470,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 490,
+        "linearizedBaseContracts": [
+          490
+        ],
+        "name": "SimpleStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 472,
+            "name": "storedData",
+            "nodeType": "VariableDeclaration",
+            "scope": 490,
+            "src": "54:22:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 471,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "54:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 474,
+            "name": "caller",
+            "nodeType": "VariableDeclaration",
+            "scope": 490,
+            "src": "83:21:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 473,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "83:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 488,
+              "nodeType": "Block",
+              "src": "139:60:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 482,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 479,
+                      "name": "caller",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 474,
+                      "src": "149:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 480,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 505,
+                        "src": "158:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 481,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "158:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "149:19:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 483,
+                  "nodeType": "ExpressionStatement",
+                  "src": "149:19:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 486,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 484,
+                      "name": "storedData",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 472,
+                      "src": "178:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 485,
+                      "name": "x",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 476,
+                      "src": "191:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "178:14:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 487,
+                  "nodeType": "ExpressionStatement",
+                  "src": "178:14:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 489,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "set",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 476,
+                  "name": "x",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 489,
+                  "src": "124:6:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 475,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "124:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "123:8:2"
+            },
+            "returnParameters": {
+              "id": 478,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "139:0:2"
+            },
+            "scope": 490,
+            "src": "111:88:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 491,
+        "src": "25:176:2"
+      }
+    ],
+    "src": "0:202:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/michaeldaigler/Documents/Consensys-Academy/BlockchainDevBootcamp/Mulitsig-Wallet-Exercise/multisig-wallet-exercise/contracts/SimpleStorage.sol",
+      "exportedSymbols": {
+        "SimpleStorage": [
+          490
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 470,
+        "name": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            490
+          ],
+          "name": "SimpleStorage",
+          "scope": 491
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "storedData",
+              "scope": 490,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 471,
+                "name": "ElementaryTypeName",
+                "src": "54:4:2"
+              }
+            ],
+            "id": 472,
+            "name": "VariableDeclaration",
+            "src": "54:22:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "caller",
+              "scope": 490,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 473,
+                "name": "ElementaryTypeName",
+                "src": "83:7:2"
+              }
+            ],
+            "id": 474,
+            "name": "VariableDeclaration",
+            "src": "83:21:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "set",
+              "scope": 490,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "x",
+                      "scope": 489,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 475,
+                        "name": "ElementaryTypeName",
+                        "src": "124:4:2"
+                      }
+                    ],
+                    "id": 476,
+                    "name": "VariableDeclaration",
+                    "src": "124:6:2"
+                  }
+                ],
+                "id": 477,
+                "name": "ParameterList",
+                "src": "123:8:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 478,
+                "name": "ParameterList",
+                "src": "139:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 474,
+                              "type": "address",
+                              "value": "caller"
+                            },
+                            "id": 479,
+                            "name": "Identifier",
+                            "src": "149:6:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 505,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 480,
+                                "name": "Identifier",
+                                "src": "158:3:2"
+                              }
+                            ],
+                            "id": 481,
+                            "name": "MemberAccess",
+                            "src": "158:10:2"
+                          }
+                        ],
+                        "id": 482,
+                        "name": "Assignment",
+                        "src": "149:19:2"
+                      }
+                    ],
+                    "id": 483,
+                    "name": "ExpressionStatement",
+                    "src": "149:19:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 472,
+                              "type": "uint256",
+                              "value": "storedData"
+                            },
+                            "id": 484,
+                            "name": "Identifier",
+                            "src": "178:10:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 476,
+                              "type": "uint256",
+                              "value": "x"
+                            },
+                            "id": 485,
+                            "name": "Identifier",
+                            "src": "191:1:2"
+                          }
+                        ],
+                        "id": 486,
+                        "name": "Assignment",
+                        "src": "178:14:2"
+                      }
+                    ],
+                    "id": 487,
+                    "name": "ExpressionStatement",
+                    "src": "178:14:2"
+                  }
+                ],
+                "id": 488,
+                "name": "Block",
+                "src": "139:60:2"
+              }
+            ],
+            "id": 489,
+            "name": "FunctionDefinition",
+            "src": "111:88:2"
+          }
+        ],
+        "id": 490,
+        "name": "ContractDefinition",
+        "src": "25:176:2"
+      }
+    ],
+    "id": 491,
+    "name": "SourceUnit",
+    "src": "0:202:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x467c037149a7AD4fbAd45723935De631cC461985",
+      "transactionHash": "0xab5eee7970cf0cddb77e005f8f6e6d476686bbf33c8b7d45308acf6e65408262"
+    }
+  },
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-09-09T19:34:17.433Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
